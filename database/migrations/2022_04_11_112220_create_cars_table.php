@@ -15,7 +15,8 @@ class CreateCarsTable extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->integer('driver_id')->nullable();
+            $table->integer('user_id')->default(0);
+            $table->integer('is_busy')->default(0);
             $table->string('model');
             $table->timestamps();
         });

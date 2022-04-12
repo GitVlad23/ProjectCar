@@ -31,8 +31,5 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('/logout', [MainController::class, 'logout'])->name('logout');
 });
 
-Route::group(['middleware' => 'car_is_busy'], function() {
-});
-
 	Route::get('/card/{carID}', [CarController::class, 'drive'])->name('drive');
 	Route::get('/exit/{carID}', [CarController::class, 'exit'])->name('exit');
